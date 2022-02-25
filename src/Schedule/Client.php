@@ -59,4 +59,22 @@ class Client extends BaseClient
             'limit' => $limit,
         ]);
     }
+
+    /**
+     * 批量查询人员排班信息
+     * @param $opUserId
+     * @param $userIds
+     * @param $fromDateTime
+     * @param $toDateTime
+     * @return mixed
+     */
+    public function listbyusers($opUserId, $userIds, $fromDateTime, $toDateTime)
+    {
+        return $this->client->postJson('topapi/attendance/schedule/listbyusers', [
+            'op_user_id' => $opUserId,
+            'userids' => $userIds,
+            'from_date_time' => (int) $fromDateTime,
+            'to_date_time' => (int) $toDateTime,
+        ]);
+    }
 }
