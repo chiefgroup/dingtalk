@@ -40,11 +40,6 @@ $config = [
 $app = new Application($config);
 ```
 
-## 文档
-
-[https://docs.easydingtalk.org](https://docs.easydingtalk.org)
-
-
 ## License
 
 MIT
