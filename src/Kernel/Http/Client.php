@@ -101,4 +101,9 @@ class Client extends BaseClient
 
         return $this;
     }
+
+    public function postJson(string $url, array $data = [], array $query = [])
+    {
+        return $this->request($url, 'POST', ['query' => $query, 'json' => $data]);
+    }
 }

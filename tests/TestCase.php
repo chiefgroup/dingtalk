@@ -51,7 +51,7 @@ class TestCase extends BaseTestCase
         return new Application(array_merge(['appkey' => 'mock-appkey', 'appsecret' => 'mock-appsecret', 'agent_id' => 'mock-agent'], $config), $overrides);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         Mockery::close();
     }
