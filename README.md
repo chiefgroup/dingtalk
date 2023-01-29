@@ -16,13 +16,13 @@ EasyDingTalk 封装了钉钉身份验证、通讯录管理、消息通知、审�
 
 ## 环境要求
 
-- PHP 7.0+
+- PHP 7.4 | 8.0
 - [Composer](https://getcomposer.org/)
 
 ## 安装
 
 ```bash
-composer require chiefgroup/dingtalk:^2.0
+composer require chiefgroup/dingtalk:^3.0
 ```
 
 ## 使用
