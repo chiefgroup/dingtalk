@@ -106,11 +106,7 @@ class TestResponse extends Response
      */
     public function assertQuery($query)
     {
-//        unset($this->options['curl']);
-//        $options = $this->options;
-//        unset($options['curl']);
-//        if($options['query'])
-        Assert::assertSame($query, $query);
+        Assert::assertSame($this->options['query'], $query);
 
         return $this;
     }
