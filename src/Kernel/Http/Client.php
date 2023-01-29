@@ -101,4 +101,21 @@ class Client extends BaseClient
 
         return $this;
     }
+
+    /**
+     * 1.1.3版本形参是query
+     * @param string $uri
+     * @param array $query
+     * @param $async
+     * @return array|\GuzzleHttp\Promise\PromiseInterface|object|\Overtrue\Http\Support\Collection|ResponseInterface|string|void
+     */
+    public function get(string $uri, array $query = [], $async = false)
+    {
+        return parent::get($uri, ['query' => $query], $async);
+    }
+
+    public function postJson(string $url, array $data = [], array $query = [])
+    {
+        return $this->request($url, 'POST', ['json' => $data, 'query' => $query]);
+    }
 }
