@@ -26,4 +26,15 @@ class Client extends BaseClient
     {
         return $this->client->postJson('topapi/blackboard/listtopten', compact('userid'));
     }
+
+    /**
+     * 获取公告详情
+     * @param string $blackboard_id
+     * @param string $operation_userid
+     * @return array|\GuzzleHttp\Promise\PromiseInterface|object|\Overtrue\Http\Support\Collection|\Psr\Http\Message\ResponseInterface|string
+     */
+    public function info(string $blackboard_id, string $operation_userid)
+    {
+        return $this->client->postJson('topapi/blackboard/get', compact('operation_userid', 'blackboard_id'));
+    }
 }
