@@ -11,11 +11,15 @@
 
 namespace EasyDingTalk;
 
+use Overtrue\Http\Traits\CreatesDefaultHttpClient;
 use Overtrue\Http\Traits\HasHttpRequests;
+use Overtrue\Http\Traits\ResponseCastable;
 
 class Robot
 {
     use HasHttpRequests;
+    use ResponseCastable;
+    use CreatesDefaultHttpClient;
 
     /**
      * 机器人 AccessToken
